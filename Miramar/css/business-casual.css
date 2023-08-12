@@ -1,12 +1,10 @@
 body {
   font-family: "Lora";
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)),
-    url("../img/bg.jpeg");
+  background-color: #fff;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
-
 h1,
 h2,
 h3,
@@ -37,7 +35,10 @@ p {
   font-size: 2rem;
   font-weight: 800;
 }
-
+svg {
+  color:aliceblue;
+  fill: aliceblue;
+}
 .site-heading .site-heading-lower {
   font-size: 5rem;
   font-weight: 100;
@@ -95,6 +96,74 @@ p {
 #mainNav .navbar-nav .nav-item.active .nav-link {
   color: #e6a756;
 }
+.navigation {
+  width:100vw;
+  height: 5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.navigation ul li a .icon { 
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5 rem;
+  transition: 0.5s;
+  color: #fff;
+}
+.navigation ul li.active a .icon { 
+  transform: translateY(-39px);
+}
+.navigation ul li a .text {
+  position: absolute;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.75 rem;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity: 0;
+}
+.navigation ul li.active a .text { 
+  opacity: 1;
+  transform: translateY(10px);
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+  transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+  transform: translateX(calc(182px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+  transform: translateX(calc(182px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+  transform: translateX(calc(182px * 3));
+}
+
 
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
