@@ -135,7 +135,7 @@ svg {
   transition: 0.5s;
   color: #fff;
 }
-.navigation ul li.active a .icon, .navigation ul li:hover a{ 
+.navigation ul li.active a .icon, .navigation ul li:hover a .icon { 
   transform: translateY(-39px);
 }
 .navigation ul li a .text {
@@ -147,7 +147,7 @@ svg {
   transition: 0.5s;
   opacity: 0;
 }
-.navigation ul li.active a .text, .navigation ul li:hover a{ 
+.navigation ul li.active a .text, .navigation ul li:hover a .text{ 
   opacity: 1;
   transform: translateY(10px);
 }
